@@ -1,6 +1,6 @@
 <img src="icon.png" align="right" />
 
-# Hooks Context API [![Awesome](https://res.cloudinary.com/mbrsagor/image/upload/v1595655810/contact_api_hooks_siglbn.png)]
+# Hooks Context API (https://res.cloudinary.com/mbrsagor/image/upload/v1595655810/contact_api_hooks_siglbn.png)
 > A curated list of awesome READMEs
 
 Elements in beautiful READMEs include, but are not limited to: images, screenshots, GIFs, text formatting, etc.
