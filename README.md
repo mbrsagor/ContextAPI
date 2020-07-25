@@ -1,7 +1,5 @@
-# Hooks Context API [(https://res.cloudinary.com/mbrsagor/image/upload/v1595655810/contact_api_hooks_siglbn.png)]
-> A curated list of awesome READMEs
-
-Elements in beautiful READMEs include, but are not limited to: images, screenshots, GIFs, text formatting, etc.
+# Hooks Context API ![alt text](https://res.cloudinary.com/mbrsagor/image/upload/v1595655810/contact_api_hooks_siglbn.png)
+> React hooks and content API
 
 
 ### `npm start`
