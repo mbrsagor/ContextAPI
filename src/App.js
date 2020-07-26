@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
-// import { countProvider } from './provider/CounterProvider';
-import './App.css';
+import React from "react";
+import { Container } from "semantic-ui-react";
 
-class App extends Component {
-  render() {
-    return <h1>Hello world</h1>
-  }
+import CounterView from "./views/counter-view";
+
+export default function App() {
+  return (
+    <Container>
+      <h1>React Hooks Context Demo</h1>
+      <CounterView />
+    </Container>
+  );
 }
-
-export default App;
