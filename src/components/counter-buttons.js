@@ -13,10 +13,15 @@ export default function CounterButtons() {
         setCount(count - 1);
     };
 
+    const reset = () => {
+        setCount(0);
+    };
+
     return (
         <div>
             <Button.Group>
-                <Button color="red" onClick={decrement}> Minus </Button>
+                <Button color="red" onClick={reset}> Reset </Button>
+                <Button color="orange" onClick={decrement}> Minus </Button>
                 <Button color="green" onClick={increment}> Add </Button>
             </Button.Group>
         </div>
