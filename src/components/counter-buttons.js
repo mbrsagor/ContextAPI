@@ -17,12 +17,17 @@ export default function CounterButtons() {
         setCount(0);
     };
 
+    const saysometing = () => {
+        setCount("Hello, I'm Sagor");
+    };
+
     return (
         <div>
             <Button.Group>
                 <Button color="red" onClick={reset}> Reset </Button>
                 <Button color="orange" onClick={decrement}> Minus </Button>
                 <Button color="green" onClick={increment}> Add </Button>
+                <Button color="yellow" onClick={saysometing}> Say something</Button>
             </Button.Group>
         </div>
     );
