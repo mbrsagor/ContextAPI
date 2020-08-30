@@ -6,7 +6,7 @@ import CounterView from "./views/counter-view";
 export default function App() {
   return (
     <Container>
-      <h1>React Hooks Context Demo</h1>
+      <h1>React Hooks Context API Demo</h1>
       <CounterView />
     </Container>
   );

@@ -16,8 +16,8 @@ export default function CounterButtons() {
     return (
         <div>
             <Button.Group>
-                <Button color="green" onClick={increment}> Add </Button>
                 <Button color="red" onClick={decrement}> Minus </Button>
+                <Button color="green" onClick={increment}> Add </Button>
             </Button.Group>
         </div>
     );
