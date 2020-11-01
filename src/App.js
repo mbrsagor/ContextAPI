@@ -5,7 +5,7 @@ export default function App() {
   return (
     <>
       <h2>Welcome to hook</h2>
-      <Son />
+      <Son name="My puti name is Ohi"/>
     </>
   );
 }

@@ -4,7 +4,7 @@ class Puti extends Component {
     render() {
         return (
             <div>
-                <h2>I'm from Puti</h2>
+                <h2>{this.props.name}</h2>
             </div>
         )
     }
