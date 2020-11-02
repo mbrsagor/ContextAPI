@@ -1,16 +1,39 @@
-import React from "react";
-import Son from './components/Son';
-import { DataProvider } from './components/MyContext';
-import Hooks from './components/Hooks';
+import React, { createContext } from 'react'
+import Cart from './components/Cart';
+import Shop from './components/Shop';
 
-export default function App() {
+export const numberContext = createContext();
+
+const App = () => {
+
+  const [count, setCount] = React.useState(0);
+
   return (
-    <>
-      <h2>Welcome to hook</h2>
-      <DataProvider value="Data send message to puti">
-        <Son />
-        <Hooks />
-      </DataProvider>
-    </>
-  );
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col-lg-6 offset-3">
+
+          <numberContext.Provider value={count}>
+              <div className="card text-center">
+                <div className="card-header">
+                  <h4 className="card-title">Counter Context API & Hooks</h4>
+                </div>
+                <div className="card-body">
+                  <h2>{count}</h2>
+                    <button onClick={() => setCount(count+1)} className="btn btn-success btn-sm">+</button>
+                    <button onClick={() => setCount(count-1)} className="btn btn-success btn-sm ml-2 mr-2">-</button>
+                  <button onClick={() => setCount(0)} className="btn btn-danger btn-sm">x</button>
+                  <hr />
+                  <Cart />
+                  <hr />
+                  <Shop/>
+                </div>
+              </div>
+          </numberContext.Provider>
+
+        </div>
+      </div>
+    </div>
+  )
 }
+export default App;
