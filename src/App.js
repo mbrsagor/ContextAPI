@@ -1,4 +1,4 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 import Cart from './components/Cart';
 import Shop from './components/Shop';
 
@@ -6,7 +6,7 @@ export const numberContext = createContext();
 
 const App = () => {
 
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
 
   return (
     <div className="container mt-5">
