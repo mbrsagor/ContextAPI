@@ -1,6 +1,8 @@
 import React, { createContext, useState } from 'react'
 import Cart from './components/Cart';
 import Shop from './components/Shop';
+import Name from './pages/Name';
+import Sagor from './pages/Sagor';
 
 export const numberContext = createContext();
 
@@ -27,6 +29,10 @@ const App = () => {
                   <Cart />
                   <hr />
                   <Shop/>
+                  <hr />
+                  <Name />
+                  <hr />
+                  <Sagor />
                 </div>
               </div>
           </numberContext.Provider>
