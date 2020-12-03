@@ -7,7 +7,7 @@ const Cart = () => {
     return (
         <>
             <h2>I'm from cart component</h2>
-            <h3>my number: {number}</h3>
+            <h3>my number: {number} is</h3>
         </>
     )
 }
