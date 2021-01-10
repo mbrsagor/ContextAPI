@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Counter from './components/counter';
-import { CounterCountext } from "./context/counter_context";
+import Counter from './counter';
+import { CounterCountext } from '../context/counter_context';
 
 
 class App extends Component {
