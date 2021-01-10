@@ -1,6 +1,5 @@
-import React from 'react';
-import CounterContext from '../../context/counter_context';
-
+import React, {useContext} from 'react';
+import {CounterCountext} from '../../context/counter_context';
 
 
 const Controller = ({actions}) => {
@@ -14,12 +13,12 @@ const Controller = ({actions}) => {
 }
 
 const Counter = () => {
-    const { count, actions } = useContext(CounterContext);
+    const { count, actions } = useContext(CounterCountext);
     return (
         <div>
-            <h3>I'm counter from context API</h3>
-            <h4>Count: {count}</h4>
-            <Controller />
+            <h3>Hooks and context API</h3>
+            <h4>Counter : {count}</h4>
+            <Controller actions={actions} />
         </div>
     );
 }
