@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ShowCounter from './views/showCounter'
 
 
 class App extends Component {
@@ -6,6 +7,7 @@ class App extends Component {
     return (
       <div>
         <h3>Counter context</h3>
+        <ShowCounter />
       </div>
     );
   }
