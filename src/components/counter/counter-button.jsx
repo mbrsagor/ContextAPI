@@ -18,9 +18,9 @@ const CounterButton = () => {
 
     return (
         <div>
-            <button onClick={increment}>Increment</button>
-            <button onClick={decrement}>Decrement</button>
-            <button onClick={reset}>Reset</button>
+            <button className="btn btn-success btn-sm mr-2" onClick={increment}>Increment</button>
+            <button className="btn btn-success btn-sm mr-2" onClick={decrement}>Decrement</button>
+            <button className="btn btn-danger btn-sm" onClick={reset}>Reset</button>
         </div>
     )
 
