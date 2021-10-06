@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import ShowCounter from './views/showCounter'
+import ShowCounter from './views/showCounter';
+import {Demo} from './views/demo';
 
 
 class App extends Component {
@@ -7,9 +8,13 @@ class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-6 offset-3 text-center">
+          <div className="col-md-6 text-center">
             <ShowCounter />
-            <br />
+            <hr />
+          </div>
+          <div className="col-md-6 text-center">
+            <Demo />
+            <hr />
           </div>
         </div>
       </div>

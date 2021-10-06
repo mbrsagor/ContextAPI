@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { CounterContext } from '../../context/counter_context';
 
 
-const CounterDispaly = () => {
+const CounterDisplay = () => {
 
     const [count] = useContext(CounterContext)
     return (
@@ -11,4 +11,4 @@ const CounterDispaly = () => {
         </div>
     );
 }
-export default CounterDispaly;
+export default CounterDisplay;

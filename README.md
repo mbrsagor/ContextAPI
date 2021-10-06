@@ -87,7 +87,7 @@ Step: 4 Create a a new file `show-counter.jsx`:
 ```javascript
 import React from 'react';
 
-import CounterDispaly from '../components/counter/counter-dispaly';
+import CounterDisplay from '../components/counter/counter-display';
 import CounterButton from '../components/counter/counter-button';
 import { CounterContextProvider } from '../context/counter_context';
 
@@ -100,7 +100,7 @@ export default function ShowCounter() {
             </div>
             <div className="card-body">
                 <CounterContextProvider>
-                    <CounterDispaly />
+                    <CounterDisplay />
                     <CounterButton />
                 </CounterContextProvider>
             </div>
