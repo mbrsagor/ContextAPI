@@ -9,6 +9,7 @@ class App extends Component {
         <div className="row">
           <div className="col-md-6 offset-3 text-center">
             <ShowCounter />
+            <br />
           </div>
         </div>
       </div>
