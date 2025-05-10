@@ -1,0 +1,81 @@
+version: '3.9'
+
+services:
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  product_db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: product
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - "5433:5432"
+
+  order_db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: order
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - "5434:5432"
+
+  product_service:
+    build: ./productService
+    volumes:
+      - ./productService:/app
+    ports:
+      - "8001:8000"
+    env_file:
+      - ./productService/.env
+    depends_on:
+      - product_db
+      - redis
+      - rabbitmq
+
+  product_worker:
+    build: ./productService
+    command: celery -A productService worker --loglevel=info
+    volumes:
+      - ./productService:/app
+    env_file:
+      - ./productService/.env
+    depends_on:
+      - product_service
+      - redis
+      - rabbitmq
+
+  order_service:
+    build: ./orderService
+    volumes:
+      - ./orderService:/app
+    ports:
+      - "8002:8000"
+    env_file:
+      - ./orderService/.env
+    depends_on:
+      - order_db
+      - redis
+      - rabbitmq
+
+  order_worker:
+    build: ./orderService
+    command: celery -A orderService worker --loglevel=info
+    volumes:
+      - ./orderService:/app
+    env_file:
+      - ./orderService/.env
+    depends_on:
+      - order_service
+      - redis
+      - rabbitmq
